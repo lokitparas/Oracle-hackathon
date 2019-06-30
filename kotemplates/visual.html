@@ -1,0 +1,49 @@
+<oj-accordion id="accordionPage" multiple >
+    <!-- ko foreach: trials-->
+    <oj-collapsible id="[[$data.id]]">
+        <span slot="header">
+            <span>
+                <span class="demo-icon-font demo-education-icon-24"></span>
+                <!-- ko if: $data.clusterlabel == 'SUCCESS'-->
+                <oj-label style="color: green">
+                    <oj-bind-text class="acordian-label" value='[[$data.clusterlabel]]'></oj-bind-text>
+                </oj-label>
+                <!-- /ko-->
+                <!-- ko if: $data.clusterlabel == 'FAILURE'-->
+                <oj-label style="color: red">
+                    <oj-bind-text class="acordian-label" value='[[$data.clusterlabel]]'></oj-bind-text>
+                </oj-label>
+                <!-- /ko-->
+            </span>
+        </span>
+
+    <!-- ko foreach: shipments -->
+
+        <div class="shipment-wrapper">
+            <h3 style="font-weight:400 ">
+                <oj-bind-text value='[[$data.shipmentId]]'></oj-bind-text>
+            </h3>
+
+            <div class="cluster-wrapper">
+                <!-- ko foreach: orders-->
+                <svg width="220" height="60">
+                    <!-- <circle cx="50" cy="50" r="40" fill="yellow" /> -->
+                    <rect x="10" y="10" rx="10" ry="10" width="200" height="50"
+                        style="fill:#70DDFB;opacity:0.5" />
+                    <text fill="#000000" font-size="12" font-family="Verdana" x="22" y="40">
+                            <oj-bind-text value='[[$data.orderId]]'></oj-bind-text>
+                    </text>
+                </svg>
+                <!-- /ko -->
+            </div>
+            <!-- <div class="train-wrapper"> -->
+                <span role="separator" aria-orientation="vertical" class="oj-toolbar-separator sep"></span>
+                <oj-train id="[[$data.shipmentId]]" steps="[[$data.stops]]" class="shipments"> </oj-train>
+            <!-- </div> -->
+        </div>
+    <!--/ko-->
+
+    </oj-collapsible>
+    <!-- /ko-->
+
+</oj-accordion>

@@ -8,3 +8,6 @@ However, the Diagnostics provides diagnostic information for the bulk plan as a 
 Therefore our Algorithm Analyzer solves this problem. We can now easily do a detailed analysis of what goes on inside any particular bulkplan algorithm using which developers can now easily debug for any anomaly inside the algorithm. 
 
 “For example, consider our standard multi-stop algorithm (Concurrent Savings).  The input is a set of shipments which are to be consolidated.  Basically, the algorithm computes a Savings Matrix showing the potential savings for each possible pair, then chooses the pair with the greatest savings, combines this pair into a new shipment, and then updates the Savings Matrix with the new combined shipment, and repeats.  When we are trying to understand what is going on in the algorithm, and all we have is the log file, it is very tedious to figure out how things are being combined.  Usually this involves sketching a savings matrix on paper and filling it in based on the log statements, and writing down which shipments have merged etc.”
+
+
+![Screenshot](Partial uncollapsed.jpg)

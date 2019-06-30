@@ -10,4 +10,4 @@ Therefore our Algorithm Analyzer solves this problem. We can now easily do a det
 “For example, consider our standard multi-stop algorithm (Concurrent Savings).  The input is a set of shipments which are to be consolidated.  Basically, the algorithm computes a Savings Matrix showing the potential savings for each possible pair, then chooses the pair with the greatest savings, combines this pair into a new shipment, and then updates the Savings Matrix with the new combined shipment, and repeats.  When we are trying to understand what is going on in the algorithm, and all we have is the log file, it is very tedious to figure out how things are being combined.  Usually this involves sketching a savings matrix on paper and filling it in based on the log statements, and writing down which shipments have merged etc.”
 
 
-![Screenshot](Partial uncollapsed.jpg)
+![Sample Visualization](https://github.com/lokitparas/Oracle-hackathon/blob/master/Screenshots/Partial%20uncollapsed.jpg)
